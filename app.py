@@ -68,11 +68,12 @@ def callback():
     result =pn.read(event.message.text)
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text=result)
+            TextSendMessage(text=event.message.text)
+            
             #ImageSendMessage(
                 #original_content_url = image,
                 #preview_image_url = image)
-        )
+            )
 
     return 'OK'
 
