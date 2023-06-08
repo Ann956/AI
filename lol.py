@@ -4,4 +4,4 @@ url = f'https://pedia.cloud.edu.tw/Entry/Detail?title={word}&search={word}#searc
 html = requests.get( url )
 bs = BeautifulSoup(html.text,'lxml')
 data = bs.find('span', class_='withoutRefLink')
-return(data.text)
+data.text
