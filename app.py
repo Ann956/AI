@@ -65,10 +65,10 @@ def callback():
             continue
         if not isinstance(event.message, TextMessage):
             continue
-    result =pn.read(event.message.text)
+        result =pn.read(event.message.text)
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text=event.message.text)
+            TextSendMessage(text= result)
             
             #ImageSendMessage(
                 #original_content_url = image,
